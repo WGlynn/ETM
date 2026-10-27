@@ -21,6 +21,8 @@ Last revised 2026-10-27.
 | X2 | Decay keyed on time since last use behaves as weak rent and beats decay keyed on age. | prediction, untested | TRANSFERS.md. |
 | X3 | Conserved credit tracks use; free credit does not. | prediction, untested | TRANSFERS.md. Free-credit side observed (verified code instance; reported correlation). |
 | X5 | Each exploit in a contribution economy breaks at least one of the five foundations of multicellular cooperation, as translated. | prediction, untested | SUBSTRATES.md. |
+| X8 | Gaia test 1: ETM's economy-side conditions predict how planetary regulation survives cheaters (by-products, local feedback). | 4 of 4 hits; 1 evidence, 1 weak evidence, 2 consistency | TRANSFERS.md, X8 test 1. |
+| E-1 to E-4 | Gaia's answers predict for economies: attribution turns shared benefits into selected ones; local pools resist free riders better than one global pool; federations recover from cheater crashes; bounded weights stabilize. | pre-registered, untested | TRANSFERS.md, X8 test 1. |
 | X9 | Rules that pay per identity are exploitable by splitting; pricing per unit of output fixes it. | prediction, partly observed | SUBSTRATES.md. Observed instance: a per-account reward floor found profitable to split (VibeSwap `contracts/incentives/ShapleyDistributor.sol:295` at `243280eb`, verified comment). |
 | X11 | User choice prices out worthless contributions only when users sufficiently outnumber contributors and judging is cheap. | prediction, untested | SUBSTRATES.md, after Noe and Hammerstein (1994). |
 

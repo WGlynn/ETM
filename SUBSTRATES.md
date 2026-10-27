@@ -38,6 +38,8 @@ West GB, Brown JH, Enquist BJ (1997), *Science*: Kleiber's law (metabolic rate s
 ### Gaia: a planet as a homeostatic controller, and its cheater problem
 Lovelock JE, Margulis L (1974). Atmospheric homeostasis by and for the biosphere: the Gaia hypothesis. *Tellus* 26: 2-10. doi:10.1111/j.2153-3490.1974.tb01946.x. They propose "the biosphere as an active adaptive control system able to maintain the earth in homeostasis." The standing objection (Dawkins; Doolittle 1981) is the cheater problem: an organism that takes the benefit of planetary regulation without paying its cost should spread, and a planet is "a population of one" that cannot be selected among. Doolittle later revised his view (*Darwinizing Gaia*, MIT Press, 2024).
 
+**Update after test 1 (TRANSFERS.md, X8):** biology's working answer has two parts. Regulation is built from by-products that cost their carriers nothing, so a cheater gains nothing by not regulating; and spatial structure (local seeding) lets cheat-free patches survive crashes and re-expand, which supplies the population that selection needs inside a single planet. Both carry over to economies as predictions E-1 to E-4.
+
 **Transfer candidate (X8):** ETM inherits Gaia's objection exactly. A single economy, or a single chain, is also a population of one. Whatever answer biology accepts for how planetary regulation resists cheaters without selection among planets is a candidate answer for how one global economy, or one protocol, could. Status: open on both sides.
 
 ## Nature's solution library (checked)
