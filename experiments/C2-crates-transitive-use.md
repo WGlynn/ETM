@@ -46,3 +46,25 @@ All of C1's limits apply: honest world, no attacker; owner-disjointness is free 
 Everything in C1, including its results: on direct adoption, V and N1 were close (AUC within 0.002), and N1 won on Brier. The last window had a broad surge of new crates (100,450 adopting crates, 27,212 owners). Not known: any reach count, any transitive outcome, or any C2 statistic.
 
 **Results.** To be appended below after the run, without editing anything above.
+
+---
+
+## Results (run 2026-10-27, after registration commit `cc90b37`)
+
+Script `c2_crates_transitive.py` (imports C1's code unchanged; the first launch failed on an import path before computing anything, fixed by adding the script's folder to the path); output `C2-run-2026-10-27.out`. The sketch was checked on hand-built graphs before the run: a diamond (one crate reaching another by two paths) counts once, and a merged cycle excludes its own members.
+
+| Registered prediction | Verdict | Numbers (Spearman with new transitive users; 95% interval of the difference) |
+|---|---|---|
+| C2-a V beats the direct count N1 | **HIT**, 5 of 5 | V minus N1: +.0022, +.0020, +.0019, +.0020, +.0012; every interval above zero |
+| C2-b V beats the plain transitive count NC | **REVERSED**, 5 of 5 | V minus NC: -.0004, -.0003, -.0004, -.0004, -.0005; every interval below zero |
+| C2-c calibration holds | **HIT** | out-of-time / hindsight 1.002, 1.005, 1.006, 1.003; skill vs climatology .480, .484, .496, .470 |
+
+Spearman with Y_T: V .625, .628, .618, .610, .603; N1 about .002 lower; NC about .0004 higher. Share of crates that gain at least one new transitive user: 9.0% (2021) falling to 6.6% (2025); mean new transitive users 15.2 to 16.5 per crate, 40.6 in the last window (the same broad surge C1 saw); the largest count is 69,303.
+
+**Not registered, reported for reading only.** Out-of-time Brier on B_T orders the three the same way in all 4 graded windows: NC lowest (.04045, .03600, .03087, .03215), then V (.04069, .03620, .03119, .03251), then N1 (.04198, .03749, .03241, .03307).
+
+## Reading
+
+1. **By the reading fixed before the run:** C2-a hit and C2-b did not, so the transitive signal is real, but a plain transitive count captures it. The damped flow is not supported.
+2. **The sizes matter more than the verdicts.** All three scores rank crates almost identically: the gaps are a few thousandths of a rank correlation on a value near .62. The verdicts are clean because 180,000 crates make tiny gaps detectable, not because the gaps are large. In C1 and C2 together, the one choice that moved the forecast by a large amount was dropping same-owner use (C1-d: 13 to 23% in Brier score).
+3. **What this means for Noesis, on honest data:** across direct and transitive use, `value_v5`'s damping and geometric tail never beat the plain count that matches the outcome. That is two looks at one dataset, with no attacker. The flow's case has to rest on what it does against an attacker (the tail bounds what a sybil ring can pump), and that is untested here.
