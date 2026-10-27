@@ -83,7 +83,7 @@ The procedure we now use:
 - **One test.** Eight predictions on one problem is a start, not a record.
 - **We chose the predictions.** Someone who did not know the hoped-for answer might have written different ones.
 - **Literature, not primary data.** Most results were checked against summaries and abstracts. The one direct quotation in this paper (Lenton 2025) was checked against the primary text or its abstract; other findings are paraphrased and should be checked against the full papers before being relied on.
-- **Analogy is not mechanism.** That two systems face the same problem and reach similar answers does not show they are the same kind of system. ETM's stronger claim needs the formal work described elsewhere in the program.
+- **Analogy is not mechanism.** Two systems that face the same problem and reach similar answers are not thereby the same kind of system. ETM's stronger claim needs formal work.
 
 ## 8. Conclusion
 
