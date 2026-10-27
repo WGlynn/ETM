@@ -25,3 +25,29 @@
 **Known confounds.** Bulk commits (automated backups, mass reformatting) move many files' last-commit dates at once and blur last touch; the number of distinct last-commit dates is reported as a diagnostic. The curated set was written by the same person whose edits drive last-touch dates, which may favor last touch for reasons unrelated to use.
 
 **Results.** To be appended below, after the run, without editing anything above.
+
+---
+
+## Results (run 2026-10-27, after pre-registration commit 4606644)
+
+Script: `m1_keep_rules.py`; raw output: `M1-run-2026-10-27.out`. Universe 1,076 files; target 39 files; K = 40; random baseline mean 1.40 of 40, 95% band 0 to 4.
+
+| Keep rule | Target recovered (of 40 kept) |
+|---|---|
+| size, smallest first (the current loader's principle) | 0.00 |
+| age, oldest first | 0.00 |
+| last touch (last commit date) | 1.00 |
+| age, newest first | 5.00 |
+| PageRank (conserved credit) | 8.00 |
+| inbound links (free credit) | 8.18 |
+
+**Verdicts as registered:**
+- **M1-a (X2): MISS.** Last touch (1.0) did not beat the best age rule (newest first, 5.0). The pre-registered confound is the likely cause: 1,075 files share only 184 distinct last-commit times, because automated backups and bulk edits commit many files at once. Commit dates measure the backup schedule, not use. This run does not test X2; it shows that this library has no usable record of use.
+- **M1-b (X3): MISS.** Conserved credit (8.00) and free credit (8.18) are tied. Both recover about six times the random rate.
+- **M1-c (P1): MISS as registered.** The size rule recovered nothing (0 of 40, below the random mean), the worst of all rules, and 8 below both link-based rules. It missed the registered condition only because last touch, which failed for the reason above, scored 1.
+
+**What the run does show:**
+1. **The current loader's principle is the worst rule tested.** Keeping the smallest files first recovered none of the curated set. This is the direction P1 predicts; the registered prediction still counts as a miss.
+2. **Conservation does not improve ranking in an honest graph.** That is a refinement of X3, not a refutation: conservation was imported from the Hayek machine as a defense against parasites, not as a better quality signal. Its value should appear only when someone pumps free credit. X3 is restated accordingly in TRANSFERS.md.
+3. **Use is not recorded, so rent by use cannot be priced.** Commit dates are swamped by bulk commits, and only 3 explicit memory reads appear in 48 surviving session transcripts. Recording which memories are surfaced and used, per session, is the prerequisite for any test of X2 or X3 on this substrate.
+4. **An earlier, unregistered result was inflated.** The library's own allocator harness reported centrality recovering 20 of 40 of a hand-curated set. That harness used a 191-file target (random about 7 of 40) and its link graph includes 80 links that originate in the curated index files themselves, so its features partly encode the curation they are scored against. This run excluded those links.

@@ -1,0 +1,12 @@
+universe 1076 files; target (linked from MEMORY.md) 39; K = 40
+files with git history 1075; distinct last-commit times 184; distinct first-commit times 194
+random: mean 1.40, 95% band [0, 4]
+size (smallest first)              0.00 of 40
+age, newest first                  5.00 of 40
+age, oldest first                  0.00 of 40
+last touch (X2)                    1.00 of 40
+inbound links (free credit)        8.18 of 40
+PageRank (conserved credit)        8.00 of 40
+M1-a last touch minus best age rule: -4.00 -> MISS
+M1-b PageRank minus inbound: -0.18 -> MISS
+M1-c size within random band: True; at least 2 below each relational/use rule: False -> MISS

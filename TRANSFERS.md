@@ -109,3 +109,8 @@ Written up in [SUBSTRATES.md](SUBSTRATES.md), where the biological source of eac
 2. **Physical bounds cannot be split; economic bounds can (E-4).** Daisyworld's bounds come from physics (water freezes and boils) and no daisy can evade them by dividing. An economy's bounds attach to accounts, which an attacker can multiply. A bound only stabilizes an economy when it is attached to something that cannot be split: a unit of verified output (X9) or an independent mind (G1). This is a disanalogy between planets and economies, recorded as a limit on T3 alongside X7.
 
 Combined record for X8 so far: 8 predictions; 5 hits (2 counting as evidence), 3 partial, 0 clean misses, and 2 disanalogies identified.
+
+
+### X3 restated after M1 (2026-10-27)
+
+M1 found conserved credit (PageRank) and free credit (raw inbound links) tied at ranking a curated memory set in an honest link graph. Restated prediction: conservation does not make a better quality signal when no one is gaming; it makes a signal that cannot be pumped. X3 now predicts that under an attack that adds free credit (self-citation, unauthenticated access counts), free-credit rankings degrade and conserved-credit rankings do not. Status: PREDICTION, untested. See experiments/M1-boot-keep-rules.md.
