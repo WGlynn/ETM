@@ -1,0 +1,34 @@
+well-mixed thresholds (smallest f):
+  c=0.1: bad finalizes at f=None, honest blocked at f=0.46
+  c=0.3: bad finalizes at f=None, honest blocked at f=0.36
+  c=0.5: bad finalizes at f=0.75, honest blocked at f=0.26
+  c=0.6: bad finalizes at f=0.7, honest blocked at f=0.0
+patched, confined attacker (k domains):
+  c=0.1 k= 1: global bad at f=None, global blocked at f=None, first local damage at f=None
+  c=0.1 k= 2: global bad at f=None, global blocked at f=None, first local damage at f=None
+  c=0.1 k= 3: global bad at f=None, global blocked at f=None, first local damage at f=None
+  c=0.1 k= 5: global bad at f=None, global blocked at f=0.23, first local damage at f=None
+  c=0.1 k=10: global bad at f=None, global blocked at f=0.46, first local damage at f=None
+  c=0.3 k= 1: global bad at f=None, global blocked at f=None, first local damage at f=None
+  c=0.3 k= 2: global bad at f=None, global blocked at f=None, first local damage at f=None
+  c=0.3 k= 3: global bad at f=None, global blocked at f=None, first local damage at f=None
+  c=0.3 k= 5: global bad at f=None, global blocked at f=0.18, first local damage at f=None
+  c=0.3 k=10: global bad at f=None, global blocked at f=0.36, first local damage at f=None
+  c=0.5 k= 1: global bad at f=None, global blocked at f=None, first local damage at f=0.08
+  c=0.5 k= 2: global bad at f=None, global blocked at f=None, first local damage at f=0.15
+  c=0.5 k= 3: global bad at f=None, global blocked at f=None, first local damage at f=0.23
+  c=0.5 k= 5: global bad at f=None, global blocked at f=0.13, first local damage at f=0.38
+  c=0.5 k=10: global bad at f=0.75, global blocked at f=0.26, first local damage at f=0.75
+  c=0.6 k= 1: global bad at f=None, global blocked at f=0.0, first local damage at f=0.07
+  c=0.6 k= 2: global bad at f=None, global blocked at f=0.0, first local damage at f=0.14
+  c=0.6 k= 3: global bad at f=None, global blocked at f=0.0, first local damage at f=0.21
+  c=0.6 k= 5: global bad at f=None, global blocked at f=0.0, first local damage at f=0.35
+  c=0.6 k=10: global bad at f=0.7, global blocked at f=0.0, first local damage at f=0.7
+patched, strategic attacker:
+  c=0.1: min f for global bad None, min f to block 0.184
+  c=0.5: min f for global bad 0.525, min f to block 0.10400000000000001
+  c=0.6: min f for global bad 0.48999999999999994, min f to block 0.0
+N1-a MISS (patched global-bad thresholds k<=3 [None, None, None] vs well-mixed 0.75)
+N1-b HIT (first local damage k<=3 [0.08, 0.15, 0.23] vs well-mixed 0.75)
+N1-c MISS (patched block thresholds k<=3 [None, None, None] vs well-mixed 0.46)
+N1-d HIT (no bad finalization with c<0.5 in either design)

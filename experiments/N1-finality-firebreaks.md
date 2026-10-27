@@ -22,3 +22,23 @@
 **Results.** To be appended below after the run, without editing anything above.
 
 **Addendum before any run (2026-10-27).** The registration did not say what happens when a concentrated attacker's standing exceeds what its k domains can hold. Defined now, before running: a k-concentrated attacker holds standing only in its k domains, up to 100% of each; standing beyond k/10 of the total cannot be placed (this models a wash ring confined to its niche). Separately, and NOT part of the registered predictions, the run also reports a **strategic attacker** who places standing in whatever domains minimize the total needed. Reason for adding it: Noesis's adversary model is strategic, so the confined case alone could mislead design.
+
+---
+
+## Results (run 2026-10-27, after the addendum)
+
+Script `n1_finality_firebreaks.py`; output `N1-run-2026-10-27.out`.
+
+| Registered prediction | Verdict | Numbers |
+|---|---|---|
+| N1-a patched easier to capture globally (c = 0.5, k <= 3) | **MISS** | A confined attacker (k <= 3) cannot capture patched finality at any share; well-mixed falls at f = 0.75. |
+| N1-b graded local damage | **HIT** | Patched suffers local damage from f = 0.08 (k = 1), 0.15 (k = 2), 0.23 (k = 3); well-mixed suffers none below 0.75. |
+| N1-c patched easier to halt (c = 0.1, k <= 3) | **MISS** | A confined attacker (k <= 3) cannot halt patched finality; well-mixed halts at f = 0.46. |
+| N1-d capital floor | **HIT** | With c < 0.5, no bad finalization in either design at any f. |
+| Overall (transfers iff N1-a and N1-c both miss) | **TRANSFERS, against a confined attacker** | The registered expectation (does not transfer) was wrong under the registered model. |
+
+**Strategic attacker (not registered; reported because Noesis's adversary is strategic):** patched finality falls to a bad checkpoint at f = 0.525 (well-mixed 0.75) and halts at f = 0.104 (well-mixed 0.26) at c = 0.5; at c = 0.1 it halts at f = 0.184 (well-mixed 0.46). Against an attacker who can choose where to place standing, patching is much weaker on both safety and liveness.
+
+**Well-mixed liveness (the current rule):** finality halts when the attacker holds f >= 0.46 of standing with 10% of capital, f >= 0.36 with 30%, f >= 0.26 with 50%, and with more than 50% of capital alone (the capital veto, by design per the code's own comment).
+
+**Reading.** Firebreaks help exactly when an attacker cannot choose its domain, and hurt when it can. So the transfer from Daisyworld and banking holds only if standing is confined by construction: standing earned in one domain counts only in that domain, the way a cell belongs to its tissue. Then a wash ring is stuck in its niche, and patching contains it. Without that, Noesis should keep its well-mixed finality. Design candidate (not built, Will-gated): domain-bound standing with patched finality, tested against a strategic attacker who must farm standing separately in each domain it wants to influence. Separately: the current rule's soft spot is liveness, not safety (halting needs far less standing than capturing).
