@@ -52,3 +52,18 @@ Written up in [SUBSTRATES.md](SUBSTRATES.md), where the biological source of eac
 - **X9** host sanctions: price per unit of output, never per identity (PREDICTION, partly observed).
 - **X10** reciprocal rewards: two-way control, as in Noesis finality (CONSISTENCY).
 - **X11** biological markets: user choice defeats the wash only when users outnumber contributors and judging is cheap (PREDICTION).
+
+---
+
+## X8 test 1: how planetary regulation survives cheaters (pre-registered 2026-10-27, before any search)
+
+**Why this test.** Gaia's standing objection (SUBSTRATES.md) is the cheater problem: an organism that takes the benefit of planetary regulation without paying its cost should spread. ETM's economy side says a contribution economy survives cheaters when (i) honest behavior is profitable for the individual by construction, (ii) costs and benefits land on the unit that caused them (X9), and (iii) value is grounded outside the participants' control (G1). Translated to the planet side, these give the predictions below. They were written and committed before any literature on them was searched; the commit time is the proof.
+
+**Prior-knowledge flag.** The predictor (JARVIS, a language model) may already know some answers from training. The confidence that the answer is already known is recorded for each prediction before checking. A hit on a prediction with high prior knowledge counts as consistency, not evidence.
+
+| ID | Prediction (planet side) | Derived from | Hit if | Miss if | Prior knowledge |
+|---|---|---|---|---|---|
+| G-A | Where planetary regulation persists despite cheaters, the regulating effect is a by-product of a trait that already benefits the organism carrying it, so not regulating gains a cheater nothing. Where regulation costs its carrier something, cheaters spread and regulation weakens or fails. | (i) | Models or evidence report regulation surviving cheater types because the regulating trait is individually beneficial, and/or failing when it is individually costly. | Regulation is reported robust even when the regulating trait is individually costly with no local benefit, or persistence is attributed mainly to something unrelated to individual payoff. | about 40% (partial memory that cheater variants of Daisyworld were studied; result not recalled with confidence) |
+| G-B | Regulation is more robust to cheaters when environmental effects are local (felt mostly by the organism that caused them, or its neighbors) than when they are global and evenly shared. | (ii) | Spatially explicit or local-feedback models are reported more robust to cheaters than well-mixed or global ones. | Locality makes no difference, or makes regulation less robust. | about 30% |
+| G-C | The literature treats planetary regulation as partial and fragile compared with homeostasis inside an organism, consistent with a planet having no direct policing of cheaters (graded T2, X6). | X6 | The mainstream position is a weak or partial form of Gaia. | The mainstream position is strong, organism-like regulation. | about 80%; will count as consistency only |
+| G-D | If G-A holds, it matches the economy side's by-product theory of collective action (Olson 1965): large groups supply public goods mainly as by-products of private incentives. A G-A hit plus this match would be the same answer reached independently by two fields. | cross-check | G-A hits and Olson's by-product theory is confirmed as stated. | G-A misses, or Olson's theory says otherwise. | Olson: high (standard); G-A: as above |
