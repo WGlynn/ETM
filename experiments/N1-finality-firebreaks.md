@@ -20,3 +20,5 @@
 **Prior knowledge.** High. These values follow from the rule by hand calculation, done while writing this registration. The run is a numerical check of that reasoning and a map of the trade-off, not independent evidence for ETM. Its value is design guidance for Noesis.
 
 **Results.** To be appended below after the run, without editing anything above.
+
+**Addendum before any run (2026-10-27).** The registration did not say what happens when a concentrated attacker's standing exceeds what its k domains can hold. Defined now, before running: a k-concentrated attacker holds standing only in its k domains, up to 100% of each; standing beyond k/10 of the total cannot be placed (this models a wash ring confined to its niche). Separately, and NOT part of the registered predictions, the run also reports a **strategic attacker** who places standing in whatever domains minimize the total needed. Reason for adding it: Noesis's adversary model is strategic, so the confined case alone could mislead design.
