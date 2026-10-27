@@ -2,7 +2,6 @@
 
 ### A Pre-Registered Test and What It Found
 
-*Will Glynn, with JARVIS. October 2026. Part of the Economic Theory of Mind research program (github.com/WGlynn/ETM). Status: first test, revised after adversarial review, ready for critique. The first version of this paper is at commit 5686b49 and stays readable there; the scoring corrections are recorded in TRANSFERS.md under "X8 test 1: corrections after adversarial review".*
 
 ## Abstract
 
