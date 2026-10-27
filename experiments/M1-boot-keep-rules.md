@@ -1,0 +1,27 @@
+# M1: which keep rule recovers what a curator judged worth loading? (pre-registered 2026-10-27, before any run)
+
+**Why.** An AI collaborator's memory (JARVIS) loads a fixed byte budget of memory at startup. Its loader keeps the safety index first and then the smallest files first; on 2026-10-27 this dropped the largest index file, which held the entries the system itself labels canonical. That is an intrinsic price (size) on a scarce resource, the pattern P1 predicts will fail ([PROGRAM.md](../PROGRAM.md)). This experiment compares keep rules on the same memory, as a first test of X2 and X3 ([TRANSFERS.md](../TRANSFERS.md)).
+
+**What counts as worth (the target).** The memory files linked from the hand-curated top-level index (`MEMORY.md`): the curator's own judgment of what deserves startup space. This is a proxy for worth, not worth itself; real use in sessions is not logged (only 3 explicit memory reads appear in the 48 surviving session transcripts), which is itself a finding: rent paid by use cannot be enforced on a signal that is not recorded.
+
+**Universe.** Top-level memory files in the memory library (private; only aggregate numbers are published). Links that originate in `MEMORY.md` or any `MEMORY_INDEX_*` file are excluded from every feature, so the curation cannot leak into the predictors.
+
+**Keep rules** (each ranks the universe; the top K are kept; K = 40, the harness default):
+- **random:** 1,000 draws; mean and 95% band.
+- **size (current loader's principle):** smallest file first.
+- **age, newest:** most recently created first (first commit date in the library's git history).
+- **age, oldest:** earliest created first.
+- **last touch (X2):** most recently changed first (last commit date). Proxy for time since last use.
+- **inbound links (free credit):** number of other files linking to it.
+- **PageRank (conserved credit):** each file splits one unit of credit among the files it links to, iterated (damping 0.85).
+
+**Predictions** (a difference counts only if it is at least 2 of the 40 slots; a tie is a miss):
+- **M1-a (X2):** last touch recovers more of the target than either age rule.
+- **M1-b (X3):** PageRank (conserved credit) recovers more than raw inbound links (free credit).
+- **M1-c (P1):** the size rule recovers no more than the top of the random band, and fewer than last touch, inbound links, and PageRank.
+
+**Prior knowledge.** A sweep reader reported, before this registration, that a recency signal recovered 19 of 40 and a centrality blend 20 of 40 in an earlier run of the same harness. So the last-touch level is roughly known (that run used file modification time, not commit dates). The age rules, the size rule, and PageRank versus raw inbound links separately were not known.
+
+**Known confounds.** Bulk commits (automated backups, mass reformatting) move many files' last-commit dates at once and blur last touch; the number of distinct last-commit dates is reported as a diagnostic. The curated set was written by the same person whose edits drive last-touch dates, which may favor last touch for reasons unrelated to use.
+
+**Results.** To be appended below, after the run, without editing anything above.
