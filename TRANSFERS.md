@@ -114,3 +114,19 @@ Combined record for X8 so far: 8 predictions; 5 hits (2 counting as evidence), 3
 ### X3 restated after M1 (2026-10-27)
 
 M1 found conserved credit (PageRank) and free credit (raw inbound links) tied at ranking a curated memory set in an honest link graph. Restated prediction: conservation does not make a better quality signal when no one is gaming; it makes a signal that cannot be pumped. X3 now predicts that under an attack that adds free credit (self-citation, unauthenticated access counts), free-credit rankings degrade and conserved-credit rankings do not. Status: PREDICTION, untested. See experiments/M1-boot-keep-rules.md.
+
+### X8 test 1: corrections after adversarial review (2026-10-27)
+
+An independent hostile review of the X8 paper and this record found scoring errors. The verdicts above are left as written; these corrections supersede them.
+
+1. **E-3 was mis-scored.** It was registered (commit 4069596) as recovery: "a federated economy recovers through its cheat-free parts, which survive and expand." It was then scored a HIT on containment alone, the half that passed. Corrected: **PARTIAL** (containment supported by Haldane and May 2011, a perspective with simplified models; recovery not tested).
+2. **E-1 to E-4 had no registered hit and miss criteria**, which STANDARDS.md requires. Every economy-side verdict was therefore graded after the fact, and counts as consistency at most.
+3. **G-A: PARTIAL**, not HIT. A costly symbiosis added resistance to cheaters in one model (Boyle et al. 2011), against the prediction's second half.
+4. **G-B: CONSISTENCY**, not evidence. Local effects are the core of the original 1983 model, so the 30% prior-knowledge estimate is not credible. Limits: the "no regulation without local seeding" result is an unpublished remark in a review; fully local limiting cases also fail; and the well-mixed model of Nicholson et al. (2017, *J. Theor. Biol.* 414: 17-34) is described by its authors as robust to perturbation.
+5. **E-4: STRETCH.** The Daisyworld bound limits how far a temperature optimum can adapt; it is not a bound on any individual's influence. The destabilizing result is Robertson and Robinson (1998), and Sugimoto (2002) found closed-form cases in which unbounded adaptive daisies regulate longer. The splitting problem is the known Sybil attack (Douceur 2002).
+6. **E-1 and E-2 restate Olson's own remedies** (selective incentives; small groups), from the book cited at G-D. The transfer recovered known economics; it did not discover new economics.
+7. **Commit times are author-set.** They show order, not independent proof; the gaps between registration and checking were minutes.
+
+**Corrected record for X8:** planet side: G-A partial, G-B consistency, G-C consistency, G-D partial consistency. Economy side: E-1 partial, E-2 partial, E-3 partial, E-4 stretch. Evidence in the STANDARDS.md sense: none. What survives: the method, the two limits (structure versus size; what a bound attaches to), and the observation that a planetary literature and an economic literature reached the same rules independently (consistency across fields, the weakest useful kind of support).
+
+**Procedure fixed for future tests:** every prediction gets written hit and miss criteria; predictions and checks are separated by a real interval or by different people; and a prediction is scored only as registered, never on its passing half.
