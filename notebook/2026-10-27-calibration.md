@@ -19,3 +19,6 @@ Fake outsiders (the grounding problem); self-fulfilling scores (high scores brin
 
 ## Next
 Pre-register a calibration test on the crates.io data in the Noesis repository (`data/crates/`): value crates at one time, then check whether the values predict reuse growth by unrelated owners in the following period. Written hit and miss criteria before the run.
+
+## Addendum: v(S) learns, and the teacher market is its lab (Will, 2026-10-27)
+If calibration grades v(S), v(S) can learn from realized outcomes. The Cadence teacher experiments (github.com/WGlynn/cadence-teachers) are a lag-free model world for this: a teacher's worth is realized within minutes as a student's later gain, fake teachers are controlled, and independence is controlled. Candidates CAL-1 (calibration-graded v(S) against held-out teachers and known fakes) and CAL-2 (calibration across teaching generations) are queued there, Will-gated. Existing support: in EXP-62e the instrument paid a weakly informative fake in proportion to the information it actually carried, which is the cost-to-fake line appearing on its own. Limit: tiny brains on toy tasks; a model world can be cleaner than reality.
