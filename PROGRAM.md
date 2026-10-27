@@ -14,6 +14,8 @@ A second claim rides on the first, and it is where ETM takes a position the prio
 
 - **T4. Worth is relational.** A held item, whether a thought, a memory, an asset, or a contribution, is worth what it does for the rest of the system, not what it is on its own. A mind or economy stays healthy to the degree its prices track that relational worth, and it degrades where they do not.
 
+- **T5. Health is calibration (candidate, 2026-10-27).** At every scale, a mind's health is a small, stable gap between what it values and what the world outside it later does. An organism holds its internal state against its environment (homeostasis); a brain, on the predictive-processing account, keeps prediction error small; a market's prices are supposed to anticipate scarcity; a contribution economy's prices should anticipate use. T5 makes T4 measurable, and it answers the judge problem: any judge inside a system favors what the system selected (survivorship), so health has to be scored against outcomes the system does not control. *Independence* of those outcomes is a price, not a fact: an outcome counts to the degree that faking it costs more than the reward it unlocks, the same line blockchain security draws between attack cost and attack reward. Status: candidate; the brain and market legs are standard accounts not yet checked here. Adopted as Noesis's success measure (Noesis `docs/research/calibration-is-homeostasis.md`, commit `19b0dcbb`).
+
 ## 2. The translation dictionary (provisional)
 
 A transfer needs a fixed dictionary, written down before it is used, so that a prediction cannot be bent after the fact. This is the first draft. Entries are hypotheses; each one is only as good as the transfers it supports.
