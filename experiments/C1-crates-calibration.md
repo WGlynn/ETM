@@ -58,3 +58,39 @@ crates.io dump `2026-07-15-020010` (Noesis `data/crates/db-dump.tar.gz`, gitigno
 Known before registering: the July null on ancestor features; the periphery figures on this dump (21.2% of crates with any reuse have at least one independent user; same-owner edges are 15.4% of all reuse edges; `RESULTS-PERIPHERY.md`); the dump's column headers, including that versions and owners carry dates. Not known: any time-split statistic, any base rate, any window's outcome, or the depth of the condensed graph.
 
 **Results.** To be appended below after the run, without editing anything above.
+
+---
+
+## Results (run 2026-10-27, after registration commit `b3a21b8`)
+
+Script `c1_crates_calibration.py`; output `C1-run-2026-10-27.out`. Data: 1,940,630 crate-level edges (same count as `build_dataset.py`), 84.6% of them between owner-disjoint crates. Condensed graph depth 17 to 20 levels (under 200, so the exact computation equals the code's loop); 6 to 10 cycles merged per cutoff on independent edges. Population grows from 58,653 crates (2021) to 183,433 (2025); the share that gains at least one new independent dependent in the next year falls from 8.6% to 6.1%.
+
+| Registered prediction | Verdict | Numbers |
+|---|---|---|
+| C1-a V's AUC >= 0.70 in all 5 windows (sanity floor) | **HIT** | 0.818, 0.823, 0.830, 0.844, 0.836 |
+| C1-b out-of-time Brier <= 1.10 x hindsight, and skill > 0, in all 4 graded windows | **HIT** | out-of-time / hindsight 1.002, 1.003, 1.005, 1.002; skill vs climatology 0.363, 0.365, 0.367, 0.352 |
+| C1-c V beats the plain independent count N1 | **REVERSED** | N1 better in 4 of 4 windows, every interval excludes zero. V's Brier is higher by 0.0021 to 0.0022 (5 to 6%); skill 0.36 vs 0.39 to 0.40 |
+| C1-d N1 beats the all-use count N2 | **HIT** | N1 better in 4 of 4, every interval excludes zero; N2's Brier is higher by 0.0058 to 0.0072 (15 to 18%) |
+
+Out-of-time Brier by window (lower is better; climatology in the last column):
+
+| cutoff | V | N1 | N2 | S1 | climatology |
+|---|---|---|---|---|---|
+| 2022-07-01 | 0.04712 | **0.04490** | 0.05185 | 0.06004 | 0.07399 |
+| 2023-07-01 | 0.04233 | **0.04022** | 0.04740 | 0.05487 | 0.06662 |
+| 2024-07-01 | 0.03692 | **0.03487** | 0.04072 | 0.04774 | 0.05835 |
+| 2025-07-01 | 0.03720 | **0.03502** | 0.04081 | 0.04726 | 0.05745 |
+
+**Not registered, reported for reading only.**
+- S1 (the same flow over all edges, identity-blind) is the worst scorer in every window; V beats it in 4 of 4 with intervals excluding zero. On flows as on counts, dropping same-owner use is what helps.
+- AUC over the whole population ranks N2 slightly above N1 (for example 0.825 vs 0.820 in 2021): having any use at all, including same-owner use, separates "will be adopted" from "will not" a little better at the zero boundary. Among crates already in use at the cutoff, N1 ranks far better (AUC 0.865 vs 0.797 in 2021). Spearman with the number of new adopters: N1 0.54 to 0.56, V about 0.003 lower, N2 and S1 0.33 to 0.38.
+- The last window's mean number of new independent dependents per crate jumps to 3.90 (1.58 to 1.81 before) while the adopted share stays near 6%. It is broad, not a few accounts: 721,776 new independent edges from 100,450 adopting crates under 27,212 owners; the largest single owner made 1.0% of them.
+
+## Reading
+
+1. **The gauge works on real data.** Calibration, as Noesis now defines success, can be computed from a public dependency graph with a time split. It separates rival pricing rules with intervals that exclude zero in every window, and a price map fitted on one year transfers to the next with at most 0.5% loss while the number of crates grew threefold. That stability belongs to past independent use as a signal, not to Noesis's rule in particular: the plain count is just as stable.
+2. **Noesis's propagation rule did not earn its complexity here.** Counting a crate's independent users forecasts its next year of independent adoption better than `value_v5`'s damped flow, in every window. The registered expectation (null or reversed) held. The flow is not far behind (AUC within 0.002), so propagation costs a little accuracy rather than breaking the price.
+3. **Independence is where the signal is.** Removing same-owner use cuts the Brier score by 13 to 15% for counts and 21 to 23% for flows. This is the cost-to-fake line showing up as forecasting power in honest data. The identity-level test used here is free to fake, so this says nothing yet about an attacker.
+4. **A scope point found after the run, recorded rather than used.** The outcome registered here is new *direct* dependents. The flow credits a crate for *transitive* use too (a crate deep under a popular one gets credit for that one's users). Those are different things, and it is possible that propagation is the right price for transitive use and the wrong forecaster of direct adoption. That would be a new question, needing its own registration; it does not change C1-c.
+
+What this result supports, in the calibration doc's own terms: rival v(S) rules can be ranked by track record, and here the simpler rule ranked first.

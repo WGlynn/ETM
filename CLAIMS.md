@@ -13,7 +13,7 @@ Last revised 2026-10-27.
 | T3 | T1 and T2 hold at every scale and recursively ("as above, so below"). | open | Criteria for support are set in PROGRAM.md section 8 and are not yet met. Known limit: structure can transfer while dynamics flip (X7, scaling laws). |
 | T4 | Worth is relational; a system stays healthy to the degree its prices track relational worth. | open | Supporting cases from the first sweep (notebook); no blind test yet. |
 
-| T5 | Health is calibration at every scale: a small, stable gap between internal valuation and later external outcome; outcomes count by cost to fake. | candidate | PROGRAM.md section 1. Adopted for Noesis 2026-10-27. Planet leg checked (homeostasis, Lovelock and Margulis 1974); brain and market legs standard, not checked. |
+| T5 | Health is calibration at every scale: a small, stable gap between internal valuation and later external outcome; outcomes count by cost to fake. | candidate | PROGRAM.md section 1. Adopted for Noesis 2026-10-27. Planet leg checked (homeostasis, Lovelock and Margulis 1974); brain and market legs standard, not checked. First measurement, C1 (crates.io, 2026-10-27, `experiments/C1-crates-calibration.md`): the gauge is computable and stable year to year; owner-independent use forecasts better than all use; Noesis's `value_v5` flow is beaten by a plain count of independent users in 4 of 4 windows (registered expectation held). |
 
 ## Predictions
 
